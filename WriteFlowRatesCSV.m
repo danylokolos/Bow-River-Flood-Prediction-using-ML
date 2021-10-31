@@ -1,10 +1,13 @@
+# Script to load array of flow rates and save results into CSV
+# Danylo Kolos
+
 close all
 clear all
 
-## Export Flow Rates
-
+# Load data
 load('FlowRates.mat')
 
+# Output file
 outputfile = 'FlowRatesCSV.csv';
 fid = fopen(outputfile,'w+');
 
@@ -38,4 +41,3 @@ for ii=1:length(AllDatesNum)
 end
 fclose(fid)
 
-##fprintf(fid,'%i
